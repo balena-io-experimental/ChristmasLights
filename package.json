@@ -1,0 +1,22 @@
+{
+  "name": "resin-christmas-lights",
+  "version": "0.0.1",
+  "description": "A simple neopixel controller on resin.io",
+  "main": "app.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "coffee app.coffee"
+  },
+  "author": "Andrew Lucas <andrewl@resin.io>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "color": "^2.0.0",
+    "lodash": "^4.17.4",
+    "rpi-ws281x-native": "^0.8.2"
+  },
+  "devDependencies": {
+    "coffeelint": "^2.0.7",
+    "resin-lint": "^1.4.2"
+  }
+}
