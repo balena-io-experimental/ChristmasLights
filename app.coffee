@@ -37,6 +37,7 @@ setInterval(initAnimation, colourInterval)
 loopAnimation = (pixel, progress = 0) ->
 	progress += colourPace
 	pixel.hsl.s = Math.max(100 - Math.abs(progress - 100), 0)
+	pixel.hsl.h = (pixel.hsl.h + colourPace) % 360
 	pixel.rgb = Colour(pixel.hsl).rgbNumber()
 	if progress < 200
 		next = _.partial(loopAnimation, pixel, progress)
