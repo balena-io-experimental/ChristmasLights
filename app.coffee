@@ -12,8 +12,9 @@ numLeds = parseInt(process.env.LED_COUNT, 10) || 240
 Leds.init(numLeds, {})
 Leds.setBrightness(parseInt(process.env.LED_BRIGHTNESS, 10) || 32)
 pixels = []
-colourPace = parseInt(process.env.COLOUR_PACE ? '3')
-colourInterval = parseInt(process.env.COLOUR_INTERVAL ? '20')
+colourPace = parseInt(process.env.COLOUR_PACE ? '3', 10)
+colourInterval = parseInt(process.env.COLOUR_INTERVAL ? '20', 10)
+colourHue = if process.env.COLOUR_HUE? then parseInt(process.env.COLOUR_HUE, 10)
 
 # Initialise an array of white LEDs
 _.times numLeds, ->
@@ -29,7 +30,7 @@ setInterval(render, 1000 / 30)
 initAnimation = ->
 	pixel = _.sample(_.filter(pixels, (pixel) -> pixel.hsl.s == 0))
 	if pixel?
-		pixel.hsl.h = _.random(360)
+		pixel.hsl.h = colourHue or _.random(360)
 		loopAnimation(pixel)
 setInterval(initAnimation, colourInterval)
 
