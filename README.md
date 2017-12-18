@@ -3,7 +3,7 @@ Christmas Lights!
 
 Well, it was a Hack Friday on Dec 1st, and I had this spare string of WS2812 NeoPixel LEDs.  What happened next is obvious.
 
-![lights](/img/lights.jpg)
+![lights](/media/lights.jpg)
 
 Except I didn't have time to write it up, so here I am keeping a weekend eye on support and writing up my new Christmas lights.  I also promised to ping @sonyagreen when I published, because she wants a set, and will hopefully have better pictures.
 
