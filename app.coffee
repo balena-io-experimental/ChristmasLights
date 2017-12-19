@@ -11,10 +11,10 @@ _ = require('lodash')
 numLeds = parseInt(process.env.LED_COUNT, 10) || 240
 Leds.init(numLeds, {})
 Leds.setBrightness(parseInt(process.env.LED_BRIGHTNESS, 10) || 32)
+colourPace = parseInt(process.env.COLOUR_PACE, 10) || 3
+colourInterval = parseInt(process.env.COLOUR_INTERVAL, 10) || 20
+colourHue = parseInt(process.env.COLOUR_HUE, 10) || null
 pixels = []
-colourPace = parseInt(process.env.COLOUR_PACE ? '3', 10)
-colourInterval = parseInt(process.env.COLOUR_INTERVAL ? '20', 10)
-colourHue = if process.env.COLOUR_HUE? then parseInt(process.env.COLOUR_HUE, 10)
 
 # Initialise an array of white LEDs
 _.times numLeds, ->
